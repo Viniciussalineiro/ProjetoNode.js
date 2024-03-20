@@ -5,10 +5,13 @@ import LivroController from "../controllers/livroscontroller.js";
 const routes = express.Router();
 
 routes.get("/livros",LivroController.listarLivros);
+routes.get("/livros/busca",LivroController.listarLivrosPorEditora);
 routes.get("/livros/:id",LivroController.listarLivroPorId);
 routes.post("/livros",LivroController.cadastraLivro); 
 routes.put("/livros/:id",LivroController.atualizarLivro); 
 routes.delete("/livros/:id",LivroController.excluirLivro); 
 
 export default routes;
+
+//https://cursos.alura.com.br/search?query=express&
 
